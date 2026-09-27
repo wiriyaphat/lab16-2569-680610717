@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="mx-auto max-w-xl space-y-4">
       <Card>
         <CardHeader>
-          <CardTitle>ระบบลงทะเบียนเรียน CPE & ISNE</CardTitle>
+          <CardTitle>ระบบจัดการวิชาเรียนและสถานะนักศึกษา</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <Button render={<Link to="/admin/enrollments" />}>

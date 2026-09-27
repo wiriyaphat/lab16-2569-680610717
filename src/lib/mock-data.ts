@@ -1,4 +1,4 @@
-import type { Student, Course, Enrollment } from "@/lib/types";
+import type { Student, Course } from "@/lib/types";
 
 export const students: Student[] = [
   {
@@ -6,47 +6,61 @@ export const students: Student[] = [
     firstName: "Matt",
     lastName: "Damon",
     program: "CPE",
+    status: "Active",
+    enrolledCourses: ["CS101", "CS201"],
   },
   {
     studentId: "650610002",
     firstName: "Cillian",
     lastName: "Murphy",
     program: "CPE",
-    courses: ["261207", "261497"],
+    status: "Active",
+    enrolledCourses: ["CS101", "CS201", "CPE301"],
   },
   {
     studentId: "650610003",
     firstName: "Emily",
     lastName: "Blunt",
     program: "ISNE",
-    courses: ["269101", "261497"],
+    status: "Active",
+    enrolledCourses: ["CPE302", "ISNE101"],
   },
 ];
 
 export const courses: Course[] = [
   {
-    courseId: "261207",
+    courseCode: "CS101",
+    courseTitle: "Introduction to Programming",
+    instructors: ["Dome"],
+  },
+  {
+    courseCode: "CS201",
+    courseTitle: "Data Structures",
+    instructors: ["Chanadda"],
+  },
+  {
+    courseCode: "CPE301",
     courseTitle: "Basic Computer Engineering Lab",
     instructors: ["Dome", "Chanadda"],
   },
   {
-    courseId: "261497",
+    courseCode: "CPE302",
     courseTitle: "Full Stack Development",
     instructors: ["Dome", "Nirand", "Chanadda"],
   },
   {
-    courseId: "269101",
+    courseCode: "ISNE101",
     courseTitle: "Introduction to Information Systems and Network Engineering",
     instructors: ["KENNETH COSH"],
   },
 ];
 
-export const enrollments: Enrollment[] = [
-  { studentId: "650610002", courseId: "261207" },
-  { studentId: "650610002", courseId: "261497" },
-  { studentId: "650610003", courseId: "269101" },
-  { studentId: "650610003", courseId: "261497" },
-];
+// export const enrollments: Enrollment[] = [
+//   { studentId: "650610002", courseId: "261207" },
+//   { studentId: "650610002", courseId: "261497" },
+//   { studentId: "650610003", courseId: "269101" },
+//   { studentId: "650610003", courseId: "261497" },
+// ];
 
 export const CURRENT_STUDENT_ID = "650610002";
 export const currentStudent = students.find(
