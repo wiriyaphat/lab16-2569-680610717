@@ -1,9 +1,9 @@
 ## lab16-2569 : Enrollment Card List
 
 ป้อนข้อมูลนักศึกษา
-รหัส นศ.:
+รหัส นศ.:680610717
 
-ชื่อ-สกุล :
+ชื่อ-สกุล : วิริยพัศ พรมผ่อง
 
 หลังจากการ Fork และ Clone repository แล้ว, ให้เปิดโฟลเดอร์ด้วย VSCode และรันคำสั่งใน terminal:
 
@@ -13,7 +13,9 @@ pnpm run dev
 ```
 
 ---
+
 ### ปรับ Types : `src\lib\types.ts`
+
 ```ts
 interface Student {
   studentId: string;
@@ -33,8 +35,11 @@ interface Course {
 }
 export type { Course };
 ```
+
 ---
+
 ### ปรับ mock-data : `src\lib\mock-data.ts`
+
 ```ts
 export const students: Student[] = [
   {
@@ -83,8 +88,8 @@ export const enrollments: Enrollment[] = [
   { studentId: "650610003", courseId: "269101" },
   { studentId: "650610003", courseId: "261497" },
 ];
-
 ```
+
 ---
 
 # shadcn/ui — เอกสารอ้างอิง
