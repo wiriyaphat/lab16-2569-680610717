@@ -1,5 +1,5 @@
 import { Outlet } from "react-router";
-
+import Footer from "@/components/Footer";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Separator } from "@/components/ui/separator";
@@ -27,9 +27,10 @@ export default function RootLayout() {
         <main className="flex-1 p-4">
           <Outlet />
         </main>
-        <footer className="border-t p-4 text-center text-xs text-muted-foreground">
+        {/* <footer className="border-t p-4 text-center text-xs text-muted-foreground">
           จัดทำโดย Wiriyaphat Phromphong — รหัสนักศึกษา 680610717
-        </footer>
+        </footer> */}
+        <Footer fullName="Wiriyaphat Phromphong" studentId="680610717" />
       </SidebarInset>
     </SidebarProvider>
   );
